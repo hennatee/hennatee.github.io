@@ -183,7 +183,7 @@ header .user .post {
 }
 
 #about-row {
-    width: 70rem;
+    max-width: 70rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -547,6 +547,9 @@ header .user .post {
  @media (max-width:768px) {
      html {
          font-size: 50%;
+     }
+     #about-row {
+         justify-content: center;
      }
  }
 @media (max-width:400px) {
