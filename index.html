@@ -23,22 +23,22 @@
  <!-- Header Section Starts -->
 
  <header>
- <div class="user">
-     <img src="images/profile.jpg" alt="profile picture">
-     <h3 class="name">Henna Tuominen</h3>
-     <p class="post">Web Developer</p>
- </div>
+    <div class="user">
+        <img src="images/profile.jpg" alt="profile picture">
+        <h3 class="name">Henna Tuominen</h3>
+        <p class="post">Web Developer</p>
+    </div>
 
- <nav class="navbar">
-     <ul>
-         <li><a href="#home">HELLO</a></li>
-         <li><a href="#about">ABOUT</a></li>
-         <li><a href="#stack">STACK</a></li>
-         <li><a href="#education">EDUCATION</a></li>
-         <li><a href="#portfolio">PORTFOLIO</a></li>
-         <li><a href="#contact">CONTACT</a></li>
-     </ul>
- </nav>
+    <nav id="navbar">
+        <ul>
+            <li><a class="navbar-link" href="#home">HELLO</a></li>
+            <li><a class="navbar-link" href="#about">ABOUT</a></li>
+            <li><a href="#stack">STACK</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- Header Section Ends -->
@@ -63,17 +63,14 @@
 
     <h1 class="heading"><span>About</span> Me</h1>
 
-    <div class="row">
+    <div id="about-row">
         <div class="info">
             <h3><span>Name: </span>Henna Tuominen</h3>
             <h3><span>Age: </span>31</h3>
             <h3><span>Post: </span>Web Developer</h3>
             <h3><span>Language: </span>Finnish, English</h3>
-            <a href="#">
-                <button class="btn">Download CV <i class="fas fa-download"></i></button>
-            </a>
         </div>
-
+        
         <div class="counter">
             <div class="box">
                 <span>10+</span>
@@ -82,17 +79,29 @@
         </div>
     </div>
 
-    <div class="row">
+    <div id="about-row">
         <div id="introduction">
-            <p>I found my passion for coding three years ago and
-            have been working determinedly towards becoming a developer ever since. 
+            <p>
+            I found my passion for coding three years ago and
+            have been working determinedly towards becoming a developer ever since.
+            </p>
+
+            <p>
             I utilise my former experience from social field to bring new perspectives
             to all aspects of development process. In addition to tehchnical 
-            stack I use my valuable set of soft skills to make my contribution top notch 
-            whether it's a small task or long-lasting project. Software development is 
-            providing me a platform to use my creativity, problem-solving skills and 
-            communicating skills all at once, which makes it nothing less than my dream job.</p>
+            stack I use my wide set of soft skills to make my contribution top notch 
+            whether it's a small task or long-lasting project.
+            </p>
+
+            <p>
+            Software development is providing me a platform to use my creativity, 
+            problem-solving skills and social skills all at once, which makes it
+            nothing less than my dream job.
+            </p>
         </div>
+        <a href="#">
+            <button class="btn">Download CV <i class="fas fa-download"></i></button>
+        </a>
     </div>
 </section>
 
@@ -105,53 +114,70 @@
 
     <div id="stack-box-container">
 
-        <div id="stack-box">
-            <h2>Front-end</h2>
-            <ul>
-                <li>Javascript</li>
-                <li>Typescript</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>Material UI</li>
-            </ul>
+        <div id="stack-outer-box">
+            <div id="stack-inner-box">
+                <h2>Front-end</h2>
+                <ul>
+                    <li>Javascript</li>
+                    <li>Typescript</li>
+                    <li>CSS</li>
+                    <li>HTML</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>Material UI</li>
+                </ul>
+            </div>
+            <h3>I pay attention to:</h3>
+            <i class="fas fa-universal-access"></i>
+            <p>Accessibility</p>
         </div>
 
-        <div id="stack-box">
-            <h2>Back-end</h2>
-            <ul>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>Java</li>
-            </ul>
+        <div id="stack-outer-box">
+            <div id="stack-inner-box">
+                <h2>Back-end</h2>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>MongoDB</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <h3>I want to learn more:</h3>
+            <i class="fas fa-user-secret"></i>
+            <p>Security</p>
         </div>
 
-        <div id="stack-box">
-            <h2>DevOps</h2>
-            <ul>
-                <li>Docker</li>
-                <li>Travis CI</li>
-                <li>Heroku</li>
-            </ul>
-        </div>
+        <div id="stack-outer-box">
+            <div id="stack-inner-box">
+                <h2>DevOps</h2>
+                <ul>
+                    <li>Docker</li>
+                    <li>Travis CI</li>
+                    <li>Heroku</li>
+                </ul>
+            </div>
+            <h3>I'm interested in:</h3>
+            <i class="fas fa-cloud"></i>
+            <p>Cloud Technologies</p>
+         </div>
 
-        <div id="stack-box">
-            <h2>Tools</h2>
-            <ul>
-                <li>Git</li>
-                <li>npm</li>
-                <li>ESLint</li>
-                <li>Figma</li>
-            </ul>
+        <div id="stack-outer-box">
+            <div id="stack-inner-box">
+                <h2>Tools</h2>
+                <ul>
+                    <li>Git</li>
+                    <li>npm</li>
+                    <li>ESLint</li>
+                    <li>Figma</li>
+                    <li>Trello</li>
+                </ul>
+            </div>
+            <h3>I put value on:</h3>
+            <i class="fas fa-users"></i>
+            <p>Communication</p>
         </div>
-
         
     </div>
-
-    <p>My goal is to implement web applications that combine accessibility with
-    beautiful design. </p>
 
 </section>
 

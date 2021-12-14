@@ -49,6 +49,7 @@ body {
 section {
     min-height: 100vh;
     padding: 1rem;
+    margin-bottom: 5rem;
 }
 .btn {
     padding: .7rem 3rem;
@@ -64,7 +65,7 @@ section {
     padding: 0 .5rem;
     font-size: 1.8rem;
 }
-.btn:hover {
+.btn:hover, .btn:active, .btn:focus {
     background: var(--colorDarkBeige);
 }
 .heading {
@@ -114,14 +115,14 @@ header .user .post {
     font-size: 2rem;
     color: var(--colorLightBeige);
 }
-header .navbar {
+#navbar {
     width: 100%;
 }
-header .navbar ul {
+#navbar ul {
     list-style: none;
     padding: 1rem 3rem;
 }
-header .navbar ul li a {
+#navbar ul li a {
     display: block;
     padding: 1rem;
     margin: 1.5rem 0;
@@ -130,7 +131,7 @@ header .navbar ul li a {
     border-radius: 5rem;
     transition: all .2s ease-in-out;
 }
-header .navbar ul li a:hover {
+#navbar a:hover, #navbar a:active, #navbar a:focus {
     transform: scale(1.2);
 }
 #menu {
@@ -153,7 +154,7 @@ header .navbar ul li a:hover {
     justify-content: center;
     flex-flow: column;
     padding: 0 15rem;
-    color: var(--colorLight);
+    color: var(--colorLightBeige);
 }
 .home h3 {
     font-size: 2.5rem;
@@ -163,7 +164,7 @@ header .navbar ul li a:hover {
     color: var(--colorBeige);
 }
 .home h1 span {
-    color: var(--colorLight);
+    color: var(--colorLightBeige);
 }
 .home p {
     font-size: 2rem;
@@ -181,61 +182,65 @@ header .navbar ul li a:hover {
     justify-content: center;
 }
 
-.about .row {
-    max-width: 600px;
+#about-row {
+    width: 70rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
+    padding: 0 4rem;
 }
-.about .row .info {
+#about-row .info {
     width: 25rem;
     padding: 2rem 1rem;
     margin-right: 3rem;
 }
-.about .row .info h3 {
+#about-row .info h3 {
     font-size: 2rem;
     color: var(--colorLightBeige);
     font-weight: 400;
     padding: 0.5rem 0;
 }
-.about .row .info h3 span {
+#about-row .info h3 span {
     display: inline;
     color: var(--colorDarkBeige);
     font-weight: bold;
     padding: 0 .5rem;
 }
-.about .row .counter {
+#about-row .counter {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.about .row .counter .box {
+#about-row .counter .box {
     width: 15rem;
     height: 15rem;
     background: none;
     text-align: center;
     padding: 2rem;
-    margin: 2rem;
+    margin: 2rem 6rem;
     border: 2px solid var(--colorBeige);
     border-radius: 50%;
 }
-.about .row .counter .box span {
+#about-row .counter .box span {
     font-size: 4rem;
     color: var(--colorDarkBeige);
 }
-.about .row .counter .box h3 {
+#about-row .counter .box h3 {
     font-size: 1.6rem;
     font-weight: 400;
     color: var(--colorLightBeige);
 }
 #introduction {
-    max-width: 600px;
+    max-width: 800px;
     font-size: 1.8rem;
     line-height: 2.5rem;
     color: var(--colorBeige);
+    margin: 2rem 0;
+}
+#introduction p {
+    margin-bottom: 1rem;
 }
 
 /* About Section Ends */
@@ -248,41 +253,59 @@ header .navbar ul li a:hover {
     align-items: center;
     justify-content: center;
 }
-
 #stack-box-container {
+    max-width: 1000px;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-#stack-box {
+#stack-outer-box {
     width: 18rem;
-    height: 23rem;
     margin: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#stack-inner-box {
+    width: 100%;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
     padding: 2rem 2rem;
     border-radius: 4px;
     border: .2rem solid var(--colorBrown);
     position: relative;
 }
-
-#stack-box h2 {
+#stack-box-container h2 {
     font-size: 2.2rem;
     color: var(--colorLightBeige);
     margin-bottom: 1rem;
 }
-
-#stack-box li {
+#stack-box-container li {
     font-size: 1.6rem;
     line-height: 2.2rem;
     color: var(--colorBeige);
     margin-left: 2rem;
 }
-
-#stack p {
-    font-size: 1.8rem;
+#stack-box-container h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
     color: var(--colorBeige);
-    max-width: 600px;
+    margin: 2rem 0;
+}    
+#stack-outer-box i {
+    color: var(--colorLightBeige);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+#stack-outer-box p {
+    font-size: 1.7rem;
+    color: var(--colorLightBeige);
+    text-transform: uppercase;
 }
 
 /* Stack Section Ends */
@@ -461,7 +484,7 @@ header .navbar ul li a:hover {
     margin: 1rem 0;
     background: var(--colorBlack1);
     border-radius: 4px;
-    color: var(--colorLight);
+    color: var(--colorLightBeige);
     text-transform: none;
     font-size: 1.7rem;
     width: 100%;
