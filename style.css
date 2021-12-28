@@ -95,7 +95,7 @@ header {
     background: var(--colorBlack1);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: column;
     text-align: center;
     border-right: solid 1px var(--colorBlack);
