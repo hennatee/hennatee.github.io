@@ -131,7 +131,7 @@ header i:hover, header i:focus {
     font-size: 2rem;
     transition: all .2s ease-in-out;
 }
-#navbar a:hover, #navbar a:active, #navbar a:focus {
+#navbar a:hover, #navbar a:focus {
     transform: scale(1.4);
 }
 #menu {
@@ -143,7 +143,7 @@ header i:hover, header i:focus {
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
-    z-index: 1000;
+    z-index: 3000;
     display: none;
 }
 
@@ -177,6 +177,7 @@ header i:hover, header i:focus {
     font-family: "Playfair Display", serif;
 }
 .home p {
+    max-width: 400px;
     font-size: 2rem;
     line-height: 3rem;
     padding: 2rem 0;
