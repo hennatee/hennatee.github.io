@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root {
     --colorBlack: #222222;
@@ -60,18 +59,19 @@ section {
     margin-top: 2rem;
     font-size: 2rem;
     border-radius: 5rem;
+    transition: all .2s ease-in-out;
 }
 .btn i {
     padding: 0 .5rem;
     font-size: 1.8rem;
 }
 .btn:hover, .btn:active, .btn:focus {
-    background: var(--colorDarkBeige);
+    transform: scale(1.1);
 }
 .heading {
     text-align: center;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0 4rem;
     padding: 1rem;
     color: var(--colorLightBeige);
@@ -88,31 +88,32 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 2000;
     height: 100%;
-    width: 35rem;
+    width: 25rem;
+    padding: 6rem 0 2rem 0;
     background: var(--colorBlack1);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-flow: column;
     text-align: center;
-    
-}
-header .user img {
-    display: none;
-    height: 17rem;
-    width: 17rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+    border-right: solid 1px var(--colorBlack);
 }
 header .user .name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--colorLightBeige);
 }
 header .user .post {
+    font-size: 1.5rem;
+    color: var(--colorLightBeige);
+}
+header i {
+    color: var(--colorDarkBeige);
     font-size: 2rem;
+    margin: 0.5rem;
+}
+header i:hover, header i:focus {
     color: var(--colorLightBeige);
 }
 #navbar {
@@ -127,19 +128,18 @@ header .user .post {
     padding: 1rem;
     margin: 1.5rem 0;
     color: var(--colorDarkBeige);
-    font-size: 3rem;
-    border-radius: 5rem;
+    font-size: 2rem;
     transition: all .2s ease-in-out;
 }
 #navbar a:hover, #navbar a:active, #navbar a:focus {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
 #menu {
     position: fixed;
     top: 2rem;
     right: 2rem;
-    background: #333;
-    color: #fff;
+    
+    color: var(--colorLightBeige);
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
@@ -152,9 +152,16 @@ header .user .post {
 .home {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-flow: column;
-    padding: 0 15rem;
+    padding: 0 5rem;
     color: var(--colorLightBeige);
+    position: relative;
+}
+#home-container {
+    padding: 5rem 0;
+    margin-left: 1rem;
+    z-index: 1000;
 }
 .home h3 {
     font-size: 2.5rem;
@@ -162,13 +169,27 @@ header .user .post {
 .home h1 {
     font-size: 5rem;
     color: var(--colorBeige);
+    font-family: "Playfair Display", serif;
+    margin-bottom: 2rem;
 }
 .home h1 span {
     color: var(--colorLightBeige);
+    font-family: "Playfair Display", serif;
 }
 .home p {
     font-size: 2rem;
-    padding: 1rem 0;
+    line-height: 3rem;
+    padding: 2rem 0;
+}
+.home img {
+    width: auto;
+    height: 100vh;
+    max-height: 900px;
+    object-fit: contain;
+    filter: grayscale(100) opacity(0.2);
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 /* Home Section Ends */
@@ -189,7 +210,7 @@ header .user .post {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 4rem;
+    
 }
 #about-row .info {
     width: 25rem;
@@ -394,17 +415,21 @@ header .user .post {
     padding: 2rem 0;
 }
 .portfolio .box-container .project {
-    width: 26rem;
-    margin: 2rem;
+    height: 52rem;
+    width: 29rem;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--colorBlack1);
+    padding: 1.5rem;
+    border-radius: 10px;
 }
 
 .portfolio .box-container .project .box {
-    height: 20rem;
+    height: 19rem;
     width: 26rem;
-    border-radius: 1rem;
+    border-radius: 4px;
     margin-bottom: 2rem;
     overflow: hidden;
     cursor: pointer;
@@ -434,6 +459,7 @@ header .user .post {
 }
 .portfolio .box-container .project p {
     width: 24rem;
+    height: 10rem;
     color: var(--colorLightBeige);
     font-size: 1.7rem;
     margin-bottom: 1.5rem;
@@ -441,13 +467,18 @@ header .user .post {
 }
 .portfolio .box-container .project p:first-of-type {
     width: auto;
+    height: 4rem;
     color: var(--colorDarkBeige);
     font-size: 1.5rem;
 }
 .portfolio .box-container .project .link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--colorDarkBeige);
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio .box-container .project .link:hover {
+    color: var(--colorLightBeige);
 }
 
 /* Portfolio Section Ends */
@@ -522,6 +553,7 @@ header .user .post {
 
 /* Media Queries */
 
+
  @media (max-width:1200px) {
      html {
          font-size: 55%;
@@ -529,6 +561,9 @@ header .user .post {
      .home {
          padding: 1rem 4rem;
      }
+     .home img {
+        margin-right: -20rem;
+    }
  }
  @media (max-width:991px) {
      header {
@@ -543,6 +578,7 @@ header .user .post {
      body {
          padding: 0;
      }
+    
  }
  @media (max-width:768px) {
      html {
@@ -551,6 +587,10 @@ header .user .post {
      #about-row {
          justify-content: center;
      }
+     .home {
+        justify-content: flex-end;
+    }
+   
  }
 @media (max-width:400px) {
     header {
@@ -571,4 +611,12 @@ header .user .post {
     .contact .row form {
         margin: 3rem 0;
     }
+}
+@media (min-width: 1500px) {
+    .home {
+        width: 70vw;
+    }
+    #home-container {
+        margin-left: 10rem;
+    } 
 }

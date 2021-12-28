@@ -14,7 +14,7 @@
     <!-- google font links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
 
 
 </head>
@@ -24,7 +24,6 @@
 
  <header>
     <div class="user">
-        <img src="images/profile.jpg" alt="profile picture">
         <h3 class="name">Henna Tuominen</h3>
         <p class="post">Web Developer</p>
     </div>
@@ -39,6 +38,15 @@
             <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
+
+    <div>
+        <a href="https://www.linkedin.com/in/tuominen-henna" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/hennatee" target="_blank">
+            <i class="fab fa-github"></i>
+        </a> 
+    </div>
 </header>
 
 <!-- Header Section Ends -->
@@ -49,10 +57,16 @@
 
 <section class="home" id="home">
 
-    <h3>HI THERE !</h3>
-    <h1>I'M <span>Henna Tuominen</span></h1>
-    <p>UX-oriented Full Stack Web Developer and Master's Student in Computing Sciences</p>
-    <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
+    <div id="home-container">
+        <h3>HI THERE !</h3>
+        <h1>I'm <span>Henna Tuominen</span></h1>
+        <p>UX-oriented Full Stack Web Developer and<br/>
+        Master's Student in Computing Sciences<br/>
+        ready to conquer the tech field</p>
+        <a href="#about"><button class="btn">About Me <i class="fas fa-user"></i></button></a>
+    </div>
+    <img src="images/profile.png" alt="profile">
+
 </section>
 
 <!-- Home Section Ends -->
@@ -63,46 +77,49 @@
 
     <h1 class="heading"><span>About</span> Me</h1>
 
-    <div id="about-row">
-        <div class="info">
-            <h3><span>Name: </span>Henna Tuominen</h3>
-            <h3><span>Age: </span>31</h3>
-            <h3><span>Post: </span>Web Developer</h3>
-            <h3><span>Language: </span>Finnish, English</h3>
-        </div>
-        
-        <div class="counter">
-            <div class="box">
-                <span>10+</span>
-                <h3>Years in Customer Work</h3>
+    <div>
+        <div id="about-row">
+            <div class="info">
+                <h3><span>Name: </span>Henna Tuominen</h3>
+                <h3><span>Age: </span>31</h3>
+                <h3><span>Post: </span>Web Developer</h3>
+                <h3><span>Language: </span>Finnish, English</h3>
+            </div>
+            
+            <div class="counter">
+                <div class="box">
+                    <span>10+</span>
+                    <h3>Years in Customer Work</h3>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="about-row">
-        <div id="introduction">
-            <p>
-            I found my passion for coding three years ago and
-            have been working determinedly towards becoming a developer ever since.
-            </p>
+        <div id="about-row">
+            <div id="introduction">
+                <p>
+                I found my passion for coding three years ago and
+                have been working determinedly towards becoming a developer ever since.
+                </p>
 
-            <p>
-            I utilise my former experience from social field to bring new perspectives
-            to all aspects of development process. In addition to tehchnical 
-            stack I use my wide set of soft skills to make my contribution top notch 
-            whether it's a small task or long-lasting project.
-            </p>
+                <p>
+                I utilise my former experience from social field to bring new perspectives
+                to all aspects of development process. In addition to tehchnical 
+                stack I use my wide set of soft skills to make my contribution top notch 
+                whether it's a small task or long-lasting project.
+                </p>
 
-            <p>
-            Software development is providing me a platform to use my creativity, 
-            problem-solving skills and social skills all at once, which makes it
-            nothing less than my dream job.
-            </p>
+                <p>
+                Software development is providing me a platform to use my creativity, 
+                problem-solving skills and social skills all at once, which makes it
+                nothing less than my dream job.
+                </p>
+            </div>
+            <a href="#">
+                <button class="btn">Download CV <i class="fas fa-download"></i></button>
+            </a>
         </div>
-        <a href="#">
-            <button class="btn">Download CV <i class="fas fa-download"></i></button>
-        </a>
     </div>
+
 </section>
 
 <!-- About Section Ends -->
@@ -154,6 +171,7 @@
                     <li>Docker</li>
                     <li>Travis CI</li>
                     <li>Heroku</li>
+                    <li>AWS</li>
                 </ul>
             </div>
             <h3>I'm interested in:</h3>
@@ -234,21 +252,15 @@
 
         <div class="project">
             <div class="box">
-                <img src="images/recipes_mockup.png" alt="recipe app">
-            </div>
-            <h3 class="title">Recipes <span>Android app</span> </h3>
-            <p>Java, Firebase</p>
-            <p>Mobile application for saving links to your favorite recipes.
-             School project implemented with Android Studio.</p>
-            <a class="link" href="https://github.com/hennatee/Recipes-mobile" target="_blank">github.com/hennatee/Recipes-mobile</a>
-        </div>
-        
-        <div class="project">
-            <div class="box">
                 <img src="images/2.jpg" alt="">
             </div>
-            <h3 class="title">Notes <span>Web app</span> </h3>
-            <p>React, Node.js</p>
+            <h3 class="title">Bitcoin Analyzer <span>Web app</span> </h3>
+            <p>React.js, API, AWS</p>
+            <p>Web Application for analyzing historical data of bitcoin. 
+            Personal project whose implementation is based on pre-assignment
+            announced by Vincit. </p>
+            <a class="link" href="https://github.com/hennatee/bitcoin-analyzer" target="_blank">github.com/hennatee/bitcoin-analyzer</a>
+            <a class="link" href="https://main.d2mzu5ov323p39.amplifyapp.com" target="_blank">main.d2mzu5ov323p39.amplifyapp.com</a>
         </div>
 
         <div class="project">
@@ -257,11 +269,21 @@
             </div>
             <h3 class="title">Satoja <span>Web app</span> </h3>
             <p>React.js, Redux, Material UI<br/> Node.js, Postgres</p>
-            <p>Platform for selling locally produced food. School project implemented for Satoja Oy.</p>
+            <p>Platform for selling and buying locally produced food. School project implemented for Satoja Oy.</p>
             <a class="link" href="https://satoja2.herokuapp.com" target="_blank">https://satoja2.herokuapp.com</a>
-
         </div>
 
+        <div class="project">
+            <div class="box">
+                <img src="images/recipes_mockup.png" alt="recipe app">
+            </div>
+            <h3 class="title">Recipes <span>Android app</span> </h3>
+            <p>Java, Firebase</p>
+            <p>Mobile application for saving links to favorite recipes.
+             School project implemented with Android Studio.</p>
+            <a class="link" href="https://github.com/hennatee/Recipes-mobile" target="_blank">github.com/hennatee/Recipes-mobile</a>
+        </div>
+        
     </div>
 </section>
 
@@ -287,7 +309,7 @@
                     <h3 class="link"> <i class="fab fa-linkedin"></i> linkedin.com/hennatuominen</h3>
                 </a>
                 <a href="https://github.com/hennatee" target="_blank">
-                    <h3 class="link"> <i class="fab fa-github"></i> @hennatee </h3>
+                    <h3 class="link"> <i class="fab fa-github"></i> github.com/hennatee </h3>
                 </a>
             </div>
     
