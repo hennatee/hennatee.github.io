@@ -23,7 +23,7 @@
 }
 *::selection {
     background: var(--colorDarkBeige);
-    color: #333;
+    color: var(--colorDarkGrey);
 }
 html {
     font-size: 62.5%;
@@ -34,7 +34,7 @@ html::-webkit-scrollbar {
     width: 1.4rem;
 }
 html::-webkit-scrollbar-track {
-    background: #222;
+    background: var(--colorBlack);
 }
 html::-webkit-scrollbar-thumb {
     background: var(--color);
@@ -43,11 +43,13 @@ body {
     background: rgb(8,8,8);
     background: linear-gradient(90deg, rgba(8,8,8,1) 35%, rgba(34,34,34,1) 100%);
     overflow-x: hidden;
-    padding-left: 35rem;
+    padding-left: 30rem;
 }
 section {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    padding: 1rem;
+    padding: 3rem;
     margin-bottom: 5rem;
 }
 .btn {
@@ -95,7 +97,7 @@ header {
     background: var(--colorBlack1);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-flow: column;
     text-align: center;
     border-right: solid 1px var(--colorBlack);
@@ -150,10 +152,8 @@ header i:hover, header i:focus {
 /* Home Section Starts */
 
 .home {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-flow: column;
     padding: 0 5rem;
     color: var(--colorLightBeige);
     position: relative;
@@ -198,8 +198,6 @@ header i:hover, header i:focus {
 /* About Section Starts */
 
 .about {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -270,8 +268,6 @@ header i:hover, header i:focus {
 /* Stack Section Starts */
 
 #stack {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -335,8 +331,6 @@ header i:hover, header i:focus {
 /* Education Section Starts */
 
 .education {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -402,8 +396,6 @@ header i:hover, header i:focus {
 /* Portfolio Section Starts */
 
 .portfolio {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -469,11 +461,11 @@ header i:hover, header i:focus {
 .portfolio .box-container .project p:first-of-type {
     width: auto;
     height: 4rem;
-    color: var(--colorDarkBeige);
+    color: var(--colorBeige);
     font-size: 1.5rem;
 }
 .portfolio .box-container .project .link {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--colorDarkBeige);
     margin-bottom: 0.5rem;
 }
@@ -487,31 +479,29 @@ header i:hover, header i:focus {
 /* Contact Section Starts */
 
 .contact {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.contact .row {
+#contact-row {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1000px; 
 }
-.contact .row .content {
+#contact-row .content {
     flex: 1 1 30rem;
     padding: 3rem;
     margin: 2rem;
 }
-.contact .row form {
+#contact-row form {
     flex: 1 1 45rem;
     padding: 2rem;
     margin: 2rem;
     margin-bottom: 4rem;
 }
-.contact .row form .box {
+#contact-row form .box {
     padding: 1.5rem;
     margin: 1rem 0;
     background: var(--colorBlack1);
@@ -521,19 +511,19 @@ header i:hover, header i:focus {
     font-size: 1.7rem;
     width: 100%;
 }
-.contact .row form .box::placeholder {
+#contact-row form .box::placeholder {
     text-transform: capitalize;
 }
-.contact .row form .message {
+#contact-row form .message {
     height: 15rem;
     resize: none;
 }
-.contact .row .content .title {
+#contact-row .content .title {
     color: var(--colorDarkBeige);
     font-size: 3rem;
     padding-bottom: 2rem;
 }
-.contact .row .content .info h3 {
+#contact-row .content .info h3 {
     display: flex;
     align-items: center;
     font-size: 2rem;
@@ -542,11 +532,11 @@ header i:hover, header i:focus {
     padding: 1rem 0;
     font-weight: normal;
 }
-.contact .row .content .info h3 i {
+#contact-row .content .info h3 i {
     padding-right: 1rem;
     color: var(--colorBeige);
 }
-.contact .row .content .info .link:hover {
+#contact-row .content .info .link:hover {
     color: var(--colorDarkBeige)
 }
 
