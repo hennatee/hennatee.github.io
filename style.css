@@ -155,6 +155,7 @@ header i:hover, header i:focus {
     display: none;
 }
 
+
 /* Home Section Starts */
 
 .home {
@@ -544,40 +545,42 @@ header i:hover, header i:focus {
 /* Media Queries */
 
 
- @media (max-width:1200px) {
-     html {
-         font-size: 55%;
-     }
-     .home {
-         padding: 1rem 4rem;
-     }
-     .home img {
+@media (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+    .home {
+        padding: 1rem 4rem;
+    }
+    .home img {
         margin-right: -20rem;
     }
- }
- @media (max-width:991px) {
-     header {
-         left: -120%;
+}
+@media (max-width:991px) {
+    header {
+        left: -120%;
+    }
+    #menu {
+        display: block;
+    }
+    header.toggle {
+        left: 0%;
+    }
+    header {
+        width: 100vw;
+    }
+    body {
+        padding: 0;
+    }  
+}
+@media (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    #about-row {
+        justify-content: center;
      }
-     #menu {
-         display: block;
-     }
-     header.toggle {
-         left: 0%;
-     }
-     body {
-         padding: 0;
-     }
-    
- }
- @media (max-width:768px) {
-     html {
-         font-size: 50%;
-     }
-     #about-row {
-         justify-content: center;
-     }
-     .home {
+    .home {
         justify-content: flex-end;
     }
     .home h1 {
