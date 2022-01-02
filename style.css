@@ -12,7 +12,7 @@
     --colorLight: #e2e9ff;
 }
 * {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -97,7 +97,7 @@ header {
     background: var(--colorBlack1);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-flow: column;
     text-align: center;
     border-right: solid 1px var(--colorBlack);
@@ -565,6 +565,15 @@ header i:hover, header i:focus {
     }
     header.toggle {
         left: 0%;
+    }
+    header .user .name {
+        font-size: 3rem;
+    }
+    header .user .post {
+        font-size: 2rem;
+    }
+    #navbar ul li a {
+        font-size: 3.5rem;
     }
     header {
         width: 100vw;
