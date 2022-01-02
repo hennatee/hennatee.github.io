@@ -508,14 +508,17 @@ header i:hover, header i:focus {
     border-radius: 4px;
     color: var(--colorLightBeige);
     text-transform: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 100%;
+    border: solid 1px var(--colorBlack);
 }
-#contact-row form .box::placeholder {
-    text-transform: capitalize;
+#contact-row form label {
+    font-size: 1.5rem;
+    color: var(--colorBeige);
+    margin-left: 1rem;
 }
 #contact-row form .message {
-    height: 15rem;
+    height: 12rem;
     resize: none;
 }
 #contact-row .content .title {
@@ -533,6 +536,7 @@ header i:hover, header i:focus {
     font-weight: normal;
 }
 #contact-row .content .info h3 i {
+    width: 3rem;
     padding-right: 1rem;
     color: var(--colorBeige);
 }
