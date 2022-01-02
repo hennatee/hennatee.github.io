@@ -570,11 +570,8 @@ header i:hover, header i:focus {
     header.toggle {
         left: 0%;
     }
-    header .user .name {
-        font-size: 3rem;
-    }
-    header .user .post {
-        font-size: 2rem;
+    header .user {
+        display: none;
     }
     #navbar ul li a {
         font-size: 3.5rem;
