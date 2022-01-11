@@ -64,11 +64,20 @@ section {
     transition: all .2s ease-in-out;
 }
 .btn i {
+    color: var(--colorBlack1);
     padding: 0 .5rem;
     font-size: 1.8rem;
 }
 .btn:hover, .btn:active, .btn:focus {
     transform: scale(1.1);
+}
+i {
+    color: var(--colorDarkBeige);
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+header i:hover, header i:focus, .project i:hover, .project i:focus {
+    color: var(--colorLightBeige);
 }
 .heading {
     text-align: center;
@@ -90,7 +99,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2000;
+    z-index: 200;
     height: 100%;
     width: 25rem;
     padding: 6rem 0 2rem 0;
@@ -151,7 +160,7 @@ header i:hover, header i:focus {
     cursor: pointer;
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
-    z-index: 3000;
+    z-index: 300;
     display: none;
 }
 
@@ -168,7 +177,7 @@ header i:hover, header i:focus {
 #home-container {
     padding: 5rem 0;
     margin-left: 1rem;
-    z-index: 1000;
+    z-index: 100;
 }
 .home h3 {
     font-size: 2.5rem;
@@ -216,7 +225,6 @@ header i:hover, header i:focus {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    
 }
 #about-row .info {
     width: 25rem;
@@ -406,11 +414,13 @@ header i:hover, header i:focus {
     justify-content: center;
     flex-wrap: wrap;
     padding: 2rem 0;
+    position: relative;
 }
 .portfolio .box-container .project {
-    height: 52rem;
+    height: 50rem;
     width: 29rem;
     margin: 1rem;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -469,9 +479,59 @@ header i:hover, header i:focus {
     color: var(--colorDarkBeige);
     margin-bottom: 0.5rem;
 }
-
 .portfolio .box-container .project .link:hover {
     color: var(--colorLightBeige);
+}
+.portfolio .btn {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    padding: .5rem 1.5rem;
+}
+.project-popup {
+    height: 90vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    z-index: 400;
+    padding: 2rem;
+    background-color: var(--colorBlack1);
+    border: solid 1px var(--colorBrown);
+    border-radius: 10px;
+}
+#close-popup {
+    display: none;
+}
+#close-popup.toggle {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 500;
+}
+#popup-text {
+    display: none;
+    color: var(--colorLightBeige);
+}
+#popup-text.toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    max-width: 420px;
+    font-size: 1.6rem;
+    color: var(--colorBeige);
+}
+#popup-text div {
+    color: var(--colorDarkBeige);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 /* Portfolio Section Ends */
